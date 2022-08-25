@@ -1,12 +1,18 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  const unseenNumbers = {};
+for (const number of array){
+    const solution = target -number;
+    if (solution in unseenNumbers) return true;
+      unseenNumbers[number]= true;
+}
+return false;
 }
 
-/* 
+/*
   Write the Big O time complexity of your function here
 */
 
-/* 
+/*
   Add your pseudocode here
 */
 
